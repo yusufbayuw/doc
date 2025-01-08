@@ -16,7 +16,7 @@ class CertificateController extends Controller
         
         $data = [
             'jenis_sertifikat' => $certificate->jenis,
-            'nomor_sertifikat' => $certificate->prefix_nomor.$participant->nomor,
+            'nomor_sertifikat' => $participant->nomor.$certificate->prefix_nomor,
             'nama_penerima' => $participant->nama_penerima,
             'asal_penerima' => $participant->asal_penerima,
             'deskripsi_sertifikat' => $certificate->deskripsi,
